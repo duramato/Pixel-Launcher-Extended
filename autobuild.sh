@@ -19,7 +19,7 @@ recover_ple() {
     mv -f "$file" "$(basename $file)" 2>/dev/null || true
   done
   for file in system/product/overlay/temp/*; do
-    mv -f "$file" "system/product/overlay/$(basename $file)" 2>/dev/null || true
+    mv -f "$file" "system/vendor/overlay/$(basename $file)" 2>/dev/null || true
   done
   for file in system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/*; do
     mv -f "$file" "system/system_ext/priv-app/WallpaperPickerGoogleRelease/$(basename $file)" 2>/dev/null || true
@@ -29,8 +29,8 @@ recover_ple() {
   done
   mv "system/product/priv-app/temp/PixelLauncherDT2S" "system/product/priv-app/$folder" 2>/dev/null || true
   mv "system/product/priv-app/temp/PixelLauncherMods" "system/product/priv-app/$folder" 2>/dev/null || true
-  mv "system/product/overlay/temp/PixelLauncherModsOverlay" "system/product/overlay/$folder" 2>/dev/null || true
-  mv "system/product/overlay/temp/IconShape" "system/product/overlay/$folder" 2>/dev/null || true
+  mv "system/product/overlay/temp/PixelLauncherModsOverlay" "system/vendor/overlay/$folder" 2>/dev/null || true
+  mv "system/product/overlay/temp/IconShape" "system/vendor/overlay/$folder" 2>/dev/null || true
   mv "system/product/priv-app/temp/ExtendedSettings" "system/product/priv-app/$folder" 2>/dev/null || true
   mv "system/product/priv-app/temp/IconShapeChanger" "system/product/priv-app/$folder" 2>/dev/null || true
 
@@ -226,7 +226,7 @@ elif [ $choice -eq 3 ]; then
       mkdir system/product/priv-app/NexusLauncherRelease/temp
       mkdir system/product/priv-app/temp
       mkdir system/product/etc/permissions/temp
-      mkdir system/product/overlay/temp
+      mkdir system/vendor/overlay/temp
       mkdir system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp
       mkdir temp
       mkdir system/system_ext/etc/permissions/temp
@@ -242,7 +242,7 @@ elif [ $choice -eq 3 ]; then
       mkdir system/product/priv-app/NexusLauncherRelease/temp
       mkdir system/product/priv-app/temp
       mkdir system/product/etc/permissions/temp
-      mkdir system/product/overlay/temp
+      mkdir system/vendor/overlay/temp
       mkdir system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp
       mkdir temp
       mkdir system/system_ext/etc/permissions/temp
@@ -258,7 +258,7 @@ elif [ $choice -eq 3 ]; then
       mkdir system/product/priv-app/NexusLauncherRelease/temp
       mkdir system/product/priv-app/temp
       mkdir system/product/etc/permissions/temp
-      mkdir system/product/overlay/temp
+      mkdir system/vendor/overlay/temp
       mkdir system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp
       mkdir temp
       mkdir system/system_ext/etc/permissions/temp
@@ -330,17 +330,17 @@ elif [ $choice -eq 3 ]; then
       mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease21.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
       mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
       mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease22.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
-      mv -f "system/product/overlay/TeamFiles_Pill_Dark.apk" "system/product/overlay/temp/$file"
-      mv -f "system/product/overlay/TeamFiles_Pill_Dark2.apk" "system/product/overlay/temp/$file"
-      mv -f "system/product/overlay/TeamFiles_Pill_Empty.apk" "system/product/overlay/temp/$file"
-      mv -f "system/product/overlay/TeamFiles_Pill_Empty2.apk" "system/product/overlay/temp/$file"
-      mv -f "system/product/overlay/TeamFiles_Pill_Light.apk" "system/product/overlay/temp/$file"
-      mv -f "system/product/overlay/TeamFiles_Pill_Light2.apk" "system/product/overlay/temp/$file"
-      mv -f "system/product/overlay/TeamFiles_Pill_Light_Accent.apk" "system/product/overlay/temp/$file"
-      mv -f "system/product/overlay/TeamFiles_Pill_Light_Accent2.apk" "system/product/overlay/temp/$file"
-      mv -f "system/product/overlay/TeamFiles_UserChip.apk" "system/product/overlay/temp/$file"
-      mv -f "system/product/overlay/TeamFiles_UserCL.apk" "system/product/overlay/temp/$file"
-      mv -f "system/product/overlay/TeamFiles_UserLockscreen.apk" "system/product/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_Pill_Dark.apk" "system/vendor/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_Pill_Dark2.apk" "system/vendor/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_Pill_Empty.apk" "system/vendor/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_Pill_Empty2.apk" "system/vendor/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_Pill_Light.apk" "system/vendor/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_Pill_Light2.apk" "system/vendor/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_Pill_Light_Accent.apk" "system/vendor/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_Pill_Light_Accent2.apk" "system/vendor/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_UserChip.apk" "system/vendor/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_UserCL.apk" "system/vendor/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_UserLockscreen.apk" "system/vendor/overlay/temp/$file"
       mv "system/product/priv-app/ExtendedSettings" "system/product/priv-app/temp/$folder"
       mv -f "system/product/etc/permissions/privapp-permissions-com.domain.liranazuz5.extendedsettings.xml" "system/product/etc/permissions/temp/$file"
       break
@@ -394,7 +394,7 @@ elif [ $choice -eq 3 ]; then
     elif [ $choice -eq 2 ]; then
       mv "system/product/priv-app/PixelLauncherMods" "system/product/priv-app/temp/$folder"
       mv -f "system/product/etc/permissions/privapp-permissions-com.kieronquinn.app.pixellaunchermods.xml" "system/product/etc/permissions/temp/$file"
-      mv "system/product/overlay/PixelLauncherModsOverlay" "system/product/overlay/temp/$folder"
+      mv "system/product/overlay/PixelLauncherModsOverlay" "system/vendor/overlay/temp/$folder"
       break
 
     else
@@ -415,22 +415,22 @@ elif [ $choice -eq 3 ]; then
       break
 
     elif [ $choice -eq 2 ]; then
-      mv -f "system/product/overlay/TeamFiles_we_Cloudy.apk" "system/product/overlay/temp/$file"
-      mv -f "system/product/overlay/TeamFiles_we_Cylinder.apk" "system/product/overlay/temp/$file"
-      mv -f "system/product/overlay/TeamFiles_we_Flower.apk" "system/product/overlay/temp/$file"
-      mv -f "system/product/overlay/TeamFiles_we_Hexagon.apk" "system/product/overlay/temp/$file"
-      mv -f "system/product/overlay/TeamFiles_we_Leaf.apk" "system/product/overlay/temp/$file"
-      mv -f "system/product/overlay/TeamFiles_we_Mallow.apk" "system/product/overlay/temp/$file"
-      mv -f "system/product/overlay/TeamFiles_we_Pebble.apk" "system/product/overlay/temp/$file"
-      mv -f "system/product/overlay/TeamFiles_we_RoundedHexagon.apk" "system/product/overlay/temp/$file"
-      mv -f "system/product/overlay/TeamFiles_we_RoundedRectangle.apk" "system/product/overlay/temp/$file"
-      mv -f "system/product/overlay/TeamFiles_we_Square.apk" "system/product/overlay/temp/$file"
-      mv -f "system/product/overlay/TeamFiles_we_Squircle.apk" "system/product/overlay/temp/$file"
-      mv -f "system/product/overlay/TeamFiles_we_Stretched.apk" "system/product/overlay/temp/$file"
-      mv -f "system/product/overlay/TeamFiles_we_TaperedRectangular.apk" "system/product/overlay/temp/$file"
-      mv -f "system/product/overlay/TeamFiles_we_Teardrops.apk" "system/product/overlay/temp/$file"
-      mv -f "system/product/overlay/TeamFiles_we_Vessel.apk" "system/product/overlay/temp/$file"
-      mv -f "system/product/overlay/TeamFiles_we_Samsung.apk" "system/product/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_we_Cloudy.apk" "system/vendor/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_we_Cylinder.apk" "system/vendor/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_we_Flower.apk" "system/vendor/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_we_Hexagon.apk" "system/vendor/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_we_Leaf.apk" "system/vendor/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_we_Mallow.apk" "system/vendor/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_we_Pebble.apk" "system/vendor/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_we_RoundedHexagon.apk" "system/vendor/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_we_RoundedRectangle.apk" "system/vendor/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_we_Square.apk" "system/vendor/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_we_Squircle.apk" "system/vendor/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_we_Stretched.apk" "system/vendor/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_we_TaperedRectangular.apk" "system/vendor/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_we_Teardrops.apk" "system/vendor/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_we_Vessel.apk" "system/vendor/overlay/temp/$file"
+      mv -f "system/product/overlay/TeamFiles_we_Samsung.apk" "system/vendor/overlay/temp/$file"
       mv "system/product/priv-app/IconShapeChanger" "system/product/priv-app/temp/$folder"
       mv -f "system/product/etc/permissions/privapp-permissions-com.saitama.iconshape.xml" "system/product/etc/permissions/temp/$file"
       break
