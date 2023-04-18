@@ -198,7 +198,7 @@ and give Termux storage access. If you get this warning "It appears that directo
 pkg upgrade || true
 pkg install -y git
 rm -rf Pixel-Launcher-Extended
-git clone --depth=1 https://github.com/saitamasahil/Pixel-Launcher-Extended
+git clone --depth=1 https://github.com/duramato/Pixel-Launcher-Extended
 cd Pixel-Launcher-Extended
 bash autobuild.sh
 mv Pixel\ Launcher\ Extended* /sdcard
